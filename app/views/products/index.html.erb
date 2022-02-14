@@ -3,10 +3,9 @@
 <ul>
   <% @products.each do |product| %>
     <li>
-      <%= product.name%>
+      <%= link_to product.title, product%>
+      <%= image_tag "todo"%>
     </li>
-    
-
   <% end %>
 </ul>
 

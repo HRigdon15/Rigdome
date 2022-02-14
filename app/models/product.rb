@@ -1,8 +1,8 @@
 class Product < ApplicationRecord
-    include Visible
+    #include Visible
 
     validates :title, presence: true
     validates :description, presence: true
-    validates :seller, presence: true
-    validates :price, comparison: {greater_than: 0}
+    #validates :seller, presence: true
+    #validates :price, comparison: {greater_than: 0}
 end

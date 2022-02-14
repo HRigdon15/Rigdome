@@ -1,8 +1,8 @@
-<%= form_with model: article do |form| %>
+<%= form_with model: product do |form| %>
   <div>
     <%= form.label :title %><br>
     <%= form.text_field :title %>
-    <% article.errors.full_messages_for(:title).each do |message| %>
+    <% product.errors.full_messages_for(:title).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
@@ -10,23 +10,15 @@
   <div>
     <%= form.label :description %><br>
     <%= form.text_area :description %><br>
-    <% article.errors.full_messages_for(:description).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
-
-  <div>
-    <%= form.label :seller %><br>
-    <%= form.text_field :seller %>
-    <% article.errors.full_messages_for(:seller).each do |message| %>
+    <% product.errors.full_messages_for(:description).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
 
   <div>
     <%= form.label :price %><br>
-    <%= form.text_area :price %><br>
-    <% article.errors.full_messages_for(:price).each do |message| %>
+    <%= form.text_field :price %><br>
+    <% product.errors.full_messages_for(:price).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>

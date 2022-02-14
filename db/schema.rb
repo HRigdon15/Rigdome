@@ -13,6 +13,10 @@
 ActiveRecord::Schema.define(version: 2022_02_13_212206) do
 
   create_table "products", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "seller"
+    t.decimal "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "status"
