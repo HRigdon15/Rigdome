@@ -3,10 +3,11 @@
 There are <%= Product.count%> products listed!! <br>
 
 <p>Prices are in dollars with no change </p>
-<p>The listed price is what you get and tax free </p>
+<p>The listed price is a straightforward price and tax free </p>
 
 
 
+<%= link_to "Current Listings", products_path %> <br>
 
 <%= link_to "New Product Listing", new_product_path %>
 
