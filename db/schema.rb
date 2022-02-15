@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2022_02_13_212206) do
     t.text "description"
     t.string "seller"
     t.decimal "price"
+    t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "status"
