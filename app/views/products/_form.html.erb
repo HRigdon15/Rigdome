@@ -1,6 +1,6 @@
 <%= form_with model: product do |form| %>
   <div>
-    <%= form.label :title %><br>
+    <b><%= form.label :title %><br></b>
     <%= form.text_field :title %>
     <% product.errors.full_messages_for(:title).each do |message| %>
       <div><%= message %></div>
@@ -8,7 +8,7 @@
   </div>
 
   <div>
-    <%= form.label :description %><br>
+    <b><%= form.label :description %><br></b>
     <%= form.text_area :description %><br>
     <% product.errors.full_messages_for(:description).each do |message| %>
       <div><%= message %></div>
@@ -16,7 +16,7 @@
   </div>
 
   <div>
-    <%= form.label :price %><br>
+    <b><%= form.label :price %><br></b>
     <%= form.text_field :price %><br>
     <% product.errors.full_messages_for(:price).each do |message| %>
       <div><%= message %></div>
@@ -24,15 +24,15 @@
   </div>
 
   <div>
-    <%= form.label :image %><br>
+    <b><%= form.label :image %><br></b>
     <%= form.text_area :image %><br>
     <% product.errors.full_messages_for(:image).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="d-grid">
+    <button class="btn btn-primary" type="button"><%= form.submit %></button>
   </div>
 
   <div>
