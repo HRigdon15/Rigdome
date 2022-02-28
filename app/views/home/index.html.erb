@@ -13,7 +13,10 @@ There are <%= Product.count%> products listed!!
 <p>Prices are in  <b>U.S. dollars ($$)</b> with <b>no change required</b></p>
 <p>The listed price is a <b>straightforward price</b> and <b>tax free!!!</b></p>
 
+<hr/>
 
+<h2> Your shopping cart has <%=@cart.length%> items</h2>
+<%= link_to "Check Out", checkout_path %>
 
 <button type="button" class="btn btn-outline-success btn-lg"><%= link_to "Current Listings", products_path %></button>
 
