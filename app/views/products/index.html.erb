@@ -1,5 +1,7 @@
 <h1>Products</h1>
 
+<h2> Your shopping cart has <%=@cart.length%> items</h2>
+
 <ul>
  
   <% @products.each do |product| %>
@@ -21,6 +23,6 @@
 
 <button type="button" class="btn btn-outline-primary"><%= link_to "New Product", new_product_path %></button>
 
-<button type="button" class="btn btn-outline-primary"><%= link_to "Check Out", new_product_path %></button>
+<button type="button" class="btn btn-outline-primary"><%= link_to "Check Out", checkout_path %></button>
 
 
