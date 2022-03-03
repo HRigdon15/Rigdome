@@ -51,8 +51,8 @@ class ProductsController < ApplicationController
     if session[:cart].nil?
       session[:cart] = []
     end
-      product = Product.find(params[:id])
-      session[:cart].append(product)
+      @product = Product.find(params[:id])
+      session[:cart].append(@product)
       redirect_to :root
   end
 

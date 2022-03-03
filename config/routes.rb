@@ -5,6 +5,6 @@ resources :products
 
 get "/product/:id/buy", to: "products#buy", as: "buy"
 
-get "/checkout", to: "home#checkout", as: "checkout"
+get "/checkout", to: "products#checkout", as: "checkout"
 
 end
