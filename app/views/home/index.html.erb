@@ -16,8 +16,7 @@ There are <%= Product.count%> products listed!!
 <hr/>
 
 
-
-<button type="button" class="btn btn-outline-success btn-lg"><%= link_to "Current Listings", products_path %></button>
+<%= link_to "Current Listings", products_path, class: "btn btn-outline-success btn-lg" %>
 
 <button type="button" class="btn btn-outline-info btn-lg"><%= link_to "New Product Listing", new_product_path %></button>
 

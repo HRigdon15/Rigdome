@@ -53,7 +53,7 @@ class ProductsController < ApplicationController
     end
       @product = Product.find(params[:id])
       session[:cart].append(@product)
-      redirect_to :root
+      redirect_to "/products"
   end
 
   def checkout
