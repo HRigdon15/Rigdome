@@ -53,7 +53,7 @@ class ProductsController < ApplicationController
     end
       @product = Product.find(params[:id])
       session[:cart].append(@product)
-      @product.quantity = @product.quantity _= [1]
+      @product.quantity = @product.quantity - 1
       redirect_to "/products"
 
   end
