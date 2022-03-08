@@ -53,7 +53,8 @@ class ProductsController < ApplicationController
     end
       @product = Product.find(params[:id])
       session[:cart].append(@product)
-      @product.quantity = @product.quantity - 1
+      @product.available = @product.decrement :available, 1
+      @product.update(available: @product.available)
       redirect_to "/products"
 
   end
