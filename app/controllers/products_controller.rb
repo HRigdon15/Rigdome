@@ -53,8 +53,9 @@ class ProductsController < ApplicationController
     end
       @product = Product.find(params[:id])
       session[:cart].append(@product)
+      @product.quantity = @product.quantity _= [1]
       redirect_to "/products"
-      @product.quantity = @product.quantity - 1
+
   end
 
   def checkout
@@ -66,7 +67,7 @@ class ProductsController < ApplicationController
 
   private
     def product_params
-      params.require(:product).permit(:title,:description,:seller, :price, :status)
+      params.require(:product).permit(:title,:description,:seller, :price, :status, :quantity)
 
     end
   
