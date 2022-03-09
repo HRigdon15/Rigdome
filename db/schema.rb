@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_08_015135) do
+ActiveRecord::Schema.define(version: 2022_03_08_030313) do
 
   create_table "products", force: :cascade do |t|
     t.string "title"
@@ -23,7 +23,10 @@ ActiveRecord::Schema.define(version: 2022_03_08_015135) do
     t.string "status"
     t.string "quantity"
     t.decimal "available"
+    t.string "amount"
+    t.integer "left"
     t.index ["available"], name: "index_products_on_available"
+    t.index ["left"], name: "index_products_on_left"
     t.index ["quantity"], name: "index_products_on_quantity"
   end
 

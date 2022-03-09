@@ -53,14 +53,16 @@ class ProductsController < ApplicationController
     end
       @product = Product.find(params[:id])
       session[:cart].append(@product)
-      @product.available = @product.decrement :available, 1
-      @product.update(available: @product.available)
       redirect_to "/products"
 
   end
 
   def checkout
       @cart = session[:cart]
+      @cart.each do |product|
+        product = Product.find(product["id"])
+        product.left = product.left-1
+        product.save
       #Empty the shopping cart
       session[:cart] = []
   end
