@@ -13,8 +13,7 @@ Product.create!([
         description: "Great to protect your children as well as yourself from head injury",
         price: 15.00,
         image: "Helmet.png",
-        quantity: 10,
-        available: 20
+        left: 10
         
     },
     {
@@ -22,8 +21,7 @@ Product.create!([
         description: "Top of the line toaster that toasts some impeccable bread",
         price: 10.00,
         image: "Toaster.jpg",
-        quantity: 10,
-        available: 20
+        left: 10
         
     },
     {
@@ -31,8 +29,7 @@ Product.create!([
         description: "Great to play videogames when you have free time",
         price: 300.00,
         image: "Xbox.jpg",
-        quantity: 10,
-        available: 20
+        left: 10
         
     }
 ])

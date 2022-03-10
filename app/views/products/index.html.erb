@@ -10,7 +10,7 @@
       <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
       <%= link_to product.title, product%>
       </a>
-      
+      There are <%= product.left %> left
       <%= image_tag product.image, width: 100, height: 100 %>
       <%= link_to "Buy Now", buy_path(product) %>
     </li>
@@ -21,7 +21,7 @@
 
 
 
-<button type="button" class="btn btn-outline-primary"><%= link_to "New Product", new_product_path %></button>
+<%= link_to "New Product", new_product_path, class:"btn btn-outline-primary"%>
 
 <button type="button" class="btn btn-outline-primary"><%= link_to "Check Out", checkout_path %></button>
 

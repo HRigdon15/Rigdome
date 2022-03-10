@@ -60,9 +60,10 @@ class ProductsController < ApplicationController
   def checkout
       @cart = session[:cart]
       @cart.each do |product|
-        product = Product.find(product["id"])
-        product.left = product.left-1
-        product.save
+        @product = Product.find(product["id"])
+        @product.left = @product.left-1
+        @product.save
+      end
       #Empty the shopping cart
       session[:cart] = []
   end
@@ -70,7 +71,7 @@ class ProductsController < ApplicationController
 
   private
     def product_params
-      params.require(:product).permit(:title,:description,:seller, :price, :status, :quantity)
+      params.require(:product).permit(:title,:description,:seller, :price, :status, :left)
 
     end
   
