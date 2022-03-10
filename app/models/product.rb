@@ -4,5 +4,5 @@ class Product < ApplicationRecord
     validates :title, presence: true
     validates :description, presence: true
     #validates :seller, presence: true
-    #validates :price, comparison: {greater_than: 0}
+    validates :left, comparison: {greater_than: 0}
 end
