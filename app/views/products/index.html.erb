@@ -22,8 +22,8 @@
 
 <%= link_to "New Product", new_product_path, class:"btn btn-outline-primary"%>
 
-<button type="button" class="btn btn-outline-primary"><%= link_to "Check Out", checkout_path %></button>
+<%= link_to "Check Out", checkout_path, class:"btn btn-outline-primary" %>
 
-<button type="button" class="btn btn-outline-primary"><%= link_to "Main Page", root_path %></button>
+<%= link_to "Main Page", root_path, class:"btn btn-outline-primary" %>
 
 <h2> Your shopping cart has <%=@cart.length%> items</h2>
