@@ -7,6 +7,12 @@ class ProductsController < ApplicationController
     @products = Product.all
     @cart = session[:cart]
   end
+
+  def list
+    # return products as json list
+    @products = Product.all
+    render json: @products
+  end
   
   def show
     @product = Product.find(params[:id])
@@ -53,7 +59,7 @@ class ProductsController < ApplicationController
     end
       @product = Product.find(params[:id])
       session[:cart].append(@product)
-      redirect_to root
+      redirect_to root_path
 
   end
 
